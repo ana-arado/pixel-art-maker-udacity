@@ -1,0 +1,55 @@
+/*Creating the variable to store the color selected to use on the hover over the canvas*/
+:root {
+  --color-selected: black;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-family: Monoton;
+    color: var(--color-selected);
+    font-size: 70px;
+    margin: 0.2em;
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+    transition: scale 0.2s;
+}
+
+/*Highlighting the block about to be painted.*/
+td:hover {
+  /* !important is necessary here because it has
+  to beat inline specificity set by Javascript.*/
+  background-color: var(--color-selected) !important;
+  transform: scale(1.5);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input[type=number] {
+    width: 6em;
+}
